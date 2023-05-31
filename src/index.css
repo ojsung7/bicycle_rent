@@ -22,7 +22,7 @@ code {
   height: 100%;
   background-color: white;
   font-size: 15px;
-  white-space: normal;
+  /* white-space: normal; */
   padding: 10px;
   border-radius: 15px;
 }
@@ -37,6 +37,14 @@ code {
 }
 
 .bicycle_info .address p{
+  font-size: 12px;
+}
+
+.bicycle_info .etc{
+  margin-top: 15px;
+}
+
+.bicycle_info .etc p{
   font-size: 12px;
 }
 
