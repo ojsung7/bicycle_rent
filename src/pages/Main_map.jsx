@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { CustomOverlayMap, Map, MapMarker, MarkerClusterer } from 'react-kakao-maps-sdk'
-import bicycleData from './bicycle.json'
+import bicycleData from '../data/bicycle.json'
 
 const Main_map = () => {
   const map_ref = useRef();
@@ -11,7 +11,10 @@ const Main_map = () => {
 
   const marker_click = (marker_index, marker_position) => {
     setLevel(2);
-    setCenter(marker_position)
+    setCenter({
+      lat: marker_position.lat,
+      lng: marker_position.lng-0.0015
+    })
     setIsOpen(marker_index);
   }
 
@@ -25,7 +28,7 @@ const Main_map = () => {
     >
       <MarkerClusterer
         averageCenter={true} // 클러스터에 포함된 마커들의 평균 위치를 클러스터 마커 위치로 설정
-        minLevel={7} // 클러스터 할 최소 지도 레벨
+        minLevel={4} // 클러스터 할 최소 지도 레벨
       >
         {bicycleData.length > 0 && (
           bicycleData.map((item, index) =>
@@ -35,10 +38,10 @@ const Main_map = () => {
                 key={index}
                 position={{ lat: item.위도, lng: item.경도 }}
                 image={{
-                  src: "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png", // 마커이미지의 주소입니다
+                  src: item.요금구분 === "무료" ? "icon/bicycle_free.png" : "icon/bicycle_charge.png",
                   size: {
-                    width: 24,
-                    height: 35
+                    width: 35,
+                    height: 40
                   },
                 }}
               />

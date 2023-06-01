@@ -55,3 +55,11 @@ code {
 .bicycle_info .title .charge_sort.free{
   color: skyblue;
 }
+
+.main_menu{
+  position: absolute;
+  z-index: 99;
+  width: 40vw;
+  height: 100vh;
+  background-color: white;
+}
