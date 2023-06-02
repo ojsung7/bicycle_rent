@@ -1,0 +1,1002 @@
+[
+  {
+    "Sigungu_code": 11110,
+    "Sigungu_name": "종로구"
+  },
+  {
+    "Sigungu_code": 11140,
+    "Sigungu_name": "중구"
+  },
+  {
+    "Sigungu_code": 11170,
+    "Sigungu_name": "용산구"
+  },
+  {
+    "Sigungu_code": 11200,
+    "Sigungu_name": "성동구"
+  },
+  {
+    "Sigungu_code": 11215,
+    "Sigungu_name": "광진구"
+  },
+  {
+    "Sigungu_code": 11230,
+    "Sigungu_name": "동대문구"
+  },
+  {
+    "Sigungu_code": 11260,
+    "Sigungu_name": "중랑구"
+  },
+  {
+    "Sigungu_code": 11290,
+    "Sigungu_name": "성북구"
+  },
+  {
+    "Sigungu_code": 11305,
+    "Sigungu_name": "강북구"
+  },
+  {
+    "Sigungu_code": 11320,
+    "Sigungu_name": "도봉구"
+  },
+  {
+    "Sigungu_code": 11350,
+    "Sigungu_name": "노원구"
+  },
+  {
+    "Sigungu_code": 11380,
+    "Sigungu_name": "은평구"
+  },
+  {
+    "Sigungu_code": 11410,
+    "Sigungu_name": "서대문구"
+  },
+  {
+    "Sigungu_code": 11440,
+    "Sigungu_name": "마포구"
+  },
+  {
+    "Sigungu_code": 11470,
+    "Sigungu_name": "양천구"
+  },
+  {
+    "Sigungu_code": 11500,
+    "Sigungu_name": "강서구"
+  },
+  {
+    "Sigungu_code": 11530,
+    "Sigungu_name": "구로구"
+  },
+  {
+    "Sigungu_code": 11545,
+    "Sigungu_name": "금천구"
+  },
+  {
+    "Sigungu_code": 11560,
+    "Sigungu_name": "영등포구"
+  },
+  {
+    "Sigungu_code": 11590,
+    "Sigungu_name": "동작구"
+  },
+  {
+    "Sigungu_code": 11620,
+    "Sigungu_name": "관악구"
+  },
+  {
+    "Sigungu_code": 11650,
+    "Sigungu_name": "서초구"
+  },
+  {
+    "Sigungu_code": 11680,
+    "Sigungu_name": "강남구"
+  },
+  {
+    "Sigungu_code": 11710,
+    "Sigungu_name": "송파구"
+  },
+  {
+    "Sigungu_code": 11740,
+    "Sigungu_name": "강동구"
+  },
+  {
+    "Sigungu_code": 26110,
+    "Sigungu_name": "중구"
+  },
+  {
+    "Sigungu_code": 26140,
+    "Sigungu_name": "서구"
+  },
+  {
+    "Sigungu_code": 26170,
+    "Sigungu_name": "동구"
+  },
+  {
+    "Sigungu_code": 26200,
+    "Sigungu_name": "영도구"
+  },
+  {
+    "Sigungu_code": 26230,
+    "Sigungu_name": "부산진구"
+  },
+  {
+    "Sigungu_code": 26260,
+    "Sigungu_name": "동래구"
+  },
+  {
+    "Sigungu_code": 26290,
+    "Sigungu_name": "남구"
+  },
+  {
+    "Sigungu_code": 26320,
+    "Sigungu_name": "북구"
+  },
+  {
+    "Sigungu_code": 26350,
+    "Sigungu_name": "해운대구"
+  },
+  {
+    "Sigungu_code": 26380,
+    "Sigungu_name": "사하구"
+  },
+  {
+    "Sigungu_code": 26410,
+    "Sigungu_name": "금정구"
+  },
+  {
+    "Sigungu_code": 26440,
+    "Sigungu_name": "강서구"
+  },
+  {
+    "Sigungu_code": 26470,
+    "Sigungu_name": "연제구"
+  },
+  {
+    "Sigungu_code": 26500,
+    "Sigungu_name": "수영구"
+  },
+  {
+    "Sigungu_code": 26530,
+    "Sigungu_name": "사상구"
+  },
+  {
+    "Sigungu_code": 26710,
+    "Sigungu_name": "기장군"
+  },
+  {
+    "Sigungu_code": 27110,
+    "Sigungu_name": "중구"
+  },
+  {
+    "Sigungu_code": 27140,
+    "Sigungu_name": "동구"
+  },
+  {
+    "Sigungu_code": 27170,
+    "Sigungu_name": "서구"
+  },
+  {
+    "Sigungu_code": 27200,
+    "Sigungu_name": "남구"
+  },
+  {
+    "Sigungu_code": 27230,
+    "Sigungu_name": "북구"
+  },
+  {
+    "Sigungu_code": 27260,
+    "Sigungu_name": "수성구"
+  },
+  {
+    "Sigungu_code": 27290,
+    "Sigungu_name": "달서구"
+  },
+  {
+    "Sigungu_code": 27710,
+    "Sigungu_name": "달성군"
+  },
+  {
+    "Sigungu_code": 28110,
+    "Sigungu_name": "중구"
+  },
+  {
+    "Sigungu_code": 28140,
+    "Sigungu_name": "동구"
+  },
+  {
+    "Sigungu_code": 28177,
+    "Sigungu_name": "미추홀구"
+  },
+  {
+    "Sigungu_code": 28185,
+    "Sigungu_name": "연수구"
+  },
+  {
+    "Sigungu_code": 28200,
+    "Sigungu_name": "남동구"
+  },
+  {
+    "Sigungu_code": 28237,
+    "Sigungu_name": "부평구"
+  },
+  {
+    "Sigungu_code": 28245,
+    "Sigungu_name": "계양구"
+  },
+  {
+    "Sigungu_code": 28260,
+    "Sigungu_name": "서구"
+  },
+  {
+    "Sigungu_code": 28710,
+    "Sigungu_name": "강화군"
+  },
+  {
+    "Sigungu_code": 28720,
+    "Sigungu_name": "옹진군"
+  },
+  {
+    "Sigungu_code": 29110,
+    "Sigungu_name": "동구"
+  },
+  {
+    "Sigungu_code": 29140,
+    "Sigungu_name": "서구"
+  },
+  {
+    "Sigungu_code": 29155,
+    "Sigungu_name": "남구"
+  },
+  {
+    "Sigungu_code": 29170,
+    "Sigungu_name": "북구"
+  },
+  {
+    "Sigungu_code": 29200,
+    "Sigungu_name": "광산구"
+  },
+  {
+    "Sigungu_code": 30110,
+    "Sigungu_name": "동구"
+  },
+  {
+    "Sigungu_code": 30140,
+    "Sigungu_name": "중구"
+  },
+  {
+    "Sigungu_code": 30170,
+    "Sigungu_name": "서구"
+  },
+  {
+    "Sigungu_code": 30200,
+    "Sigungu_name": "유성구"
+  },
+  {
+    "Sigungu_code": 30230,
+    "Sigungu_name": "대덕구"
+  },
+  {
+    "Sigungu_code": 31110,
+    "Sigungu_name": "중구"
+  },
+  {
+    "Sigungu_code": 31140,
+    "Sigungu_name": "남구"
+  },
+  {
+    "Sigungu_code": 31170,
+    "Sigungu_name": "동구"
+  },
+  {
+    "Sigungu_code": 31200,
+    "Sigungu_name": "북구"
+  },
+  {
+    "Sigungu_code": 31710,
+    "Sigungu_name": "울주군"
+  },
+  {
+    "Sigungu_code": 36110,
+    "Sigungu_name": "세종특별자치시"
+  },
+  {
+    "Sigungu_code": 41111,
+    "Sigungu_name": "수원시 장안구"
+  },
+  {
+    "Sigungu_code": 41113,
+    "Sigungu_name": "수원시 권선구"
+  },
+  {
+    "Sigungu_code": 41115,
+    "Sigungu_name": "수원시 팔달구"
+  },
+  {
+    "Sigungu_code": 41117,
+    "Sigungu_name": "수원시 영통구"
+  },
+  {
+    "Sigungu_code": 41131,
+    "Sigungu_name": "성남시 수정구"
+  },
+  {
+    "Sigungu_code": 41133,
+    "Sigungu_name": "성남시 중원구"
+  },
+  {
+    "Sigungu_code": 41135,
+    "Sigungu_name": "성남시 분당구"
+  },
+  {
+    "Sigungu_code": 41150,
+    "Sigungu_name": "의정부시"
+  },
+  {
+    "Sigungu_code": 41171,
+    "Sigungu_name": "안양시 만안구"
+  },
+  {
+    "Sigungu_code": 41173,
+    "Sigungu_name": "안양시 동안구"
+  },
+  {
+    "Sigungu_code": 41190,
+    "Sigungu_name": "부천시"
+  },
+  {
+    "Sigungu_code": 41210,
+    "Sigungu_name": "광명시"
+  },
+  {
+    "Sigungu_code": 41220,
+    "Sigungu_name": "평택시"
+  },
+  {
+    "Sigungu_code": 41250,
+    "Sigungu_name": "동두천시"
+  },
+  {
+    "Sigungu_code": 41271,
+    "Sigungu_name": "안산시 상록구"
+  },
+  {
+    "Sigungu_code": 41273,
+    "Sigungu_name": "안산시 단원구"
+  },
+  {
+    "Sigungu_code": 41281,
+    "Sigungu_name": "고양시 덕양구"
+  },
+  {
+    "Sigungu_code": 41285,
+    "Sigungu_name": "고양시 일산동구"
+  },
+  {
+    "Sigungu_code": 41287,
+    "Sigungu_name": "고양시 일산서구"
+  },
+  {
+    "Sigungu_code": 41290,
+    "Sigungu_name": "과천시"
+  },
+  {
+    "Sigungu_code": 41310,
+    "Sigungu_name": "구리시"
+  },
+  {
+    "Sigungu_code": 41360,
+    "Sigungu_name": "남양주시"
+  },
+  {
+    "Sigungu_code": 41370,
+    "Sigungu_name": "오산시"
+  },
+  {
+    "Sigungu_code": 41390,
+    "Sigungu_name": "시흥시"
+  },
+  {
+    "Sigungu_code": 41410,
+    "Sigungu_name": "군포시"
+  },
+  {
+    "Sigungu_code": 41430,
+    "Sigungu_name": "의왕시"
+  },
+  {
+    "Sigungu_code": 41450,
+    "Sigungu_name": "하남시"
+  },
+  {
+    "Sigungu_code": 41461,
+    "Sigungu_name": "용인시 처인구"
+  },
+  {
+    "Sigungu_code": 41463,
+    "Sigungu_name": "용인시 기흥구"
+  },
+  {
+    "Sigungu_code": 41465,
+    "Sigungu_name": "용인시 수지구"
+  },
+  {
+    "Sigungu_code": 41480,
+    "Sigungu_name": "파주시"
+  },
+  {
+    "Sigungu_code": 41500,
+    "Sigungu_name": "이천시"
+  },
+  {
+    "Sigungu_code": 41550,
+    "Sigungu_name": "안성시"
+  },
+  {
+    "Sigungu_code": 41570,
+    "Sigungu_name": "김포시"
+  },
+  {
+    "Sigungu_code": 41590,
+    "Sigungu_name": "화성시"
+  },
+  {
+    "Sigungu_code": 41610,
+    "Sigungu_name": "광주시"
+  },
+  {
+    "Sigungu_code": 41630,
+    "Sigungu_name": "양주시"
+  },
+  {
+    "Sigungu_code": 41650,
+    "Sigungu_name": "포천시"
+  },
+  {
+    "Sigungu_code": 41670,
+    "Sigungu_name": "여주시"
+  },
+  {
+    "Sigungu_code": 41800,
+    "Sigungu_name": "연천군"
+  },
+  {
+    "Sigungu_code": 41820,
+    "Sigungu_name": "가평군"
+  },
+  {
+    "Sigungu_code": 41830,
+    "Sigungu_name": "양평군"
+  },
+  {
+    "Sigungu_code": 42110,
+    "Sigungu_name": "춘천시"
+  },
+  {
+    "Sigungu_code": 42130,
+    "Sigungu_name": "원주시"
+  },
+  {
+    "Sigungu_code": 42150,
+    "Sigungu_name": "강릉시"
+  },
+  {
+    "Sigungu_code": 42170,
+    "Sigungu_name": "동해시"
+  },
+  {
+    "Sigungu_code": 42190,
+    "Sigungu_name": "태백시"
+  },
+  {
+    "Sigungu_code": 42210,
+    "Sigungu_name": "속초시"
+  },
+  {
+    "Sigungu_code": 42230,
+    "Sigungu_name": "삼척시"
+  },
+  {
+    "Sigungu_code": 42720,
+    "Sigungu_name": "홍천군"
+  },
+  {
+    "Sigungu_code": 42730,
+    "Sigungu_name": "횡성군"
+  },
+  {
+    "Sigungu_code": 42750,
+    "Sigungu_name": "영월군"
+  },
+  {
+    "Sigungu_code": 42760,
+    "Sigungu_name": "평창군"
+  },
+  {
+    "Sigungu_code": 42770,
+    "Sigungu_name": "정선군"
+  },
+  {
+    "Sigungu_code": 42780,
+    "Sigungu_name": "철원군"
+  },
+  {
+    "Sigungu_code": 42790,
+    "Sigungu_name": "화천군"
+  },
+  {
+    "Sigungu_code": 42800,
+    "Sigungu_name": "양구군"
+  },
+  {
+    "Sigungu_code": 42810,
+    "Sigungu_name": "인제군"
+  },
+  {
+    "Sigungu_code": 42820,
+    "Sigungu_name": "고성군"
+  },
+  {
+    "Sigungu_code": 42830,
+    "Sigungu_name": "양양군"
+  },
+  {
+    "Sigungu_code": 43111,
+    "Sigungu_name": "청주시 상당구"
+  },
+  {
+    "Sigungu_code": 43112,
+    "Sigungu_name": "청주시 서원구"
+  },
+  {
+    "Sigungu_code": 43113,
+    "Sigungu_name": "청주시 흥덕구"
+  },
+  {
+    "Sigungu_code": 43114,
+    "Sigungu_name": "청주시 청원구"
+  },
+  {
+    "Sigungu_code": 43130,
+    "Sigungu_name": "충주시"
+  },
+  {
+    "Sigungu_code": 43150,
+    "Sigungu_name": "제천시"
+  },
+  {
+    "Sigungu_code": 43720,
+    "Sigungu_name": "보은군"
+  },
+  {
+    "Sigungu_code": 43730,
+    "Sigungu_name": "옥천군"
+  },
+  {
+    "Sigungu_code": 43740,
+    "Sigungu_name": "영동군"
+  },
+  {
+    "Sigungu_code": 43745,
+    "Sigungu_name": "증평군"
+  },
+  {
+    "Sigungu_code": 43750,
+    "Sigungu_name": "진천군"
+  },
+  {
+    "Sigungu_code": 43760,
+    "Sigungu_name": "괴산군"
+  },
+  {
+    "Sigungu_code": 43770,
+    "Sigungu_name": "음성군"
+  },
+  {
+    "Sigungu_code": 43800,
+    "Sigungu_name": "단양군"
+  },
+  {
+    "Sigungu_code": 44131,
+    "Sigungu_name": "천안시 동남구"
+  },
+  {
+    "Sigungu_code": 44133,
+    "Sigungu_name": "천안시 서북구"
+  },
+  {
+    "Sigungu_code": 44150,
+    "Sigungu_name": "공주시"
+  },
+  {
+    "Sigungu_code": 44180,
+    "Sigungu_name": "보령시"
+  },
+  {
+    "Sigungu_code": 44200,
+    "Sigungu_name": "아산시"
+  },
+  {
+    "Sigungu_code": 44210,
+    "Sigungu_name": "서산시"
+  },
+  {
+    "Sigungu_code": 44230,
+    "Sigungu_name": "논산시"
+  },
+  {
+    "Sigungu_code": 44250,
+    "Sigungu_name": "계룡시"
+  },
+  {
+    "Sigungu_code": 44270,
+    "Sigungu_name": "당진시"
+  },
+  {
+    "Sigungu_code": 44710,
+    "Sigungu_name": "금산군"
+  },
+  {
+    "Sigungu_code": 44760,
+    "Sigungu_name": "부여군"
+  },
+  {
+    "Sigungu_code": 44770,
+    "Sigungu_name": "서천군"
+  },
+  {
+    "Sigungu_code": 44790,
+    "Sigungu_name": "청양군"
+  },
+  {
+    "Sigungu_code": 44800,
+    "Sigungu_name": "홍성군"
+  },
+  {
+    "Sigungu_code": 44810,
+    "Sigungu_name": "예산군"
+  },
+  {
+    "Sigungu_code": 44825,
+    "Sigungu_name": "태안군"
+  },
+  {
+    "Sigungu_code": 45111,
+    "Sigungu_name": "전주시 완산구"
+  },
+  {
+    "Sigungu_code": 45113,
+    "Sigungu_name": "전주시 덕진구"
+  },
+  {
+    "Sigungu_code": 45130,
+    "Sigungu_name": "군산시"
+  },
+  {
+    "Sigungu_code": 45140,
+    "Sigungu_name": "익산시"
+  },
+  {
+    "Sigungu_code": 45180,
+    "Sigungu_name": "정읍시"
+  },
+  {
+    "Sigungu_code": 45190,
+    "Sigungu_name": "남원시"
+  },
+  {
+    "Sigungu_code": 45210,
+    "Sigungu_name": "김제시"
+  },
+  {
+    "Sigungu_code": 45710,
+    "Sigungu_name": "완주군"
+  },
+  {
+    "Sigungu_code": 45720,
+    "Sigungu_name": "진안군"
+  },
+  {
+    "Sigungu_code": 45730,
+    "Sigungu_name": "무주군"
+  },
+  {
+    "Sigungu_code": 45740,
+    "Sigungu_name": "장수군"
+  },
+  {
+    "Sigungu_code": 45750,
+    "Sigungu_name": "임실군"
+  },
+  {
+    "Sigungu_code": 45770,
+    "Sigungu_name": "순창군"
+  },
+  {
+    "Sigungu_code": 45790,
+    "Sigungu_name": "고창군"
+  },
+  {
+    "Sigungu_code": 45800,
+    "Sigungu_name": "부안군"
+  },
+  {
+    "Sigungu_code": 46110,
+    "Sigungu_name": "목포시"
+  },
+  {
+    "Sigungu_code": 46130,
+    "Sigungu_name": "여수시"
+  },
+  {
+    "Sigungu_code": 46150,
+    "Sigungu_name": "순천시"
+  },
+  {
+    "Sigungu_code": 46170,
+    "Sigungu_name": "나주시"
+  },
+  {
+    "Sigungu_code": 46230,
+    "Sigungu_name": "광양시"
+  },
+  {
+    "Sigungu_code": 46710,
+    "Sigungu_name": "담양군"
+  },
+  {
+    "Sigungu_code": 46720,
+    "Sigungu_name": "곡성군"
+  },
+  {
+    "Sigungu_code": 46730,
+    "Sigungu_name": "구례군"
+  },
+  {
+    "Sigungu_code": 46770,
+    "Sigungu_name": "고흥군"
+  },
+  {
+    "Sigungu_code": 46780,
+    "Sigungu_name": "보성군"
+  },
+  {
+    "Sigungu_code": 46790,
+    "Sigungu_name": "화순군"
+  },
+  {
+    "Sigungu_code": 46800,
+    "Sigungu_name": "장흥군"
+  },
+  {
+    "Sigungu_code": 46810,
+    "Sigungu_name": "강진군"
+  },
+  {
+    "Sigungu_code": 46820,
+    "Sigungu_name": "해남군"
+  },
+  {
+    "Sigungu_code": 46830,
+    "Sigungu_name": "영암군"
+  },
+  {
+    "Sigungu_code": 46840,
+    "Sigungu_name": "무안군"
+  },
+  {
+    "Sigungu_code": 46860,
+    "Sigungu_name": "함평군"
+  },
+  {
+    "Sigungu_code": 46870,
+    "Sigungu_name": "영광군"
+  },
+  {
+    "Sigungu_code": 46880,
+    "Sigungu_name": "장성군"
+  },
+  {
+    "Sigungu_code": 46890,
+    "Sigungu_name": "완도군"
+  },
+  {
+    "Sigungu_code": 46900,
+    "Sigungu_name": "진도군"
+  },
+  {
+    "Sigungu_code": 46910,
+    "Sigungu_name": "신안군"
+  },
+  {
+    "Sigungu_code": 47111,
+    "Sigungu_name": "포항시 남구"
+  },
+  {
+    "Sigungu_code": 47113,
+    "Sigungu_name": "포항시 북구"
+  },
+  {
+    "Sigungu_code": 47130,
+    "Sigungu_name": "경주시"
+  },
+  {
+    "Sigungu_code": 47150,
+    "Sigungu_name": "김천시"
+  },
+  {
+    "Sigungu_code": 47170,
+    "Sigungu_name": "안동시"
+  },
+  {
+    "Sigungu_code": 47190,
+    "Sigungu_name": "구미시"
+  },
+  {
+    "Sigungu_code": 47210,
+    "Sigungu_name": "영주시"
+  },
+  {
+    "Sigungu_code": 47230,
+    "Sigungu_name": "영천시"
+  },
+  {
+    "Sigungu_code": 47250,
+    "Sigungu_name": "상주시"
+  },
+  {
+    "Sigungu_code": 47280,
+    "Sigungu_name": "문경시"
+  },
+  {
+    "Sigungu_code": 47290,
+    "Sigungu_name": "경산시"
+  },
+  {
+    "Sigungu_code": 47720,
+    "Sigungu_name": "군위군"
+  },
+  {
+    "Sigungu_code": 47730,
+    "Sigungu_name": "의성군"
+  },
+  {
+    "Sigungu_code": 47750,
+    "Sigungu_name": "청송군"
+  },
+  {
+    "Sigungu_code": 47760,
+    "Sigungu_name": "영양군"
+  },
+  {
+    "Sigungu_code": 47770,
+    "Sigungu_name": "영덕군"
+  },
+  {
+    "Sigungu_code": 47820,
+    "Sigungu_name": "청도군"
+  },
+  {
+    "Sigungu_code": 47830,
+    "Sigungu_name": "고령군"
+  },
+  {
+    "Sigungu_code": 47840,
+    "Sigungu_name": "성주군"
+  },
+  {
+    "Sigungu_code": 47850,
+    "Sigungu_name": "칠곡군"
+  },
+  {
+    "Sigungu_code": 47900,
+    "Sigungu_name": "예천군"
+  },
+  {
+    "Sigungu_code": 47920,
+    "Sigungu_name": "봉화군"
+  },
+  {
+    "Sigungu_code": 47930,
+    "Sigungu_name": "울진군"
+  },
+  {
+    "Sigungu_code": 47940,
+    "Sigungu_name": "울릉군"
+  },
+  {
+    "Sigungu_code": 48121,
+    "Sigungu_name": "창원시 의창구"
+  },
+  {
+    "Sigungu_code": 48123,
+    "Sigungu_name": "창원시 성산구"
+  },
+  {
+    "Sigungu_code": 48125,
+    "Sigungu_name": "창원시 마산합포구"
+  },
+  {
+    "Sigungu_code": 48127,
+    "Sigungu_name": "창원시 마산회원구"
+  },
+  {
+    "Sigungu_code": 48129,
+    "Sigungu_name": "창원시 진해구"
+  },
+  {
+    "Sigungu_code": 48170,
+    "Sigungu_name": "진주시"
+  },
+  {
+    "Sigungu_code": 48220,
+    "Sigungu_name": "통영시"
+  },
+  {
+    "Sigungu_code": 48240,
+    "Sigungu_name": "사천시"
+  },
+  {
+    "Sigungu_code": 48250,
+    "Sigungu_name": "김해시"
+  },
+  {
+    "Sigungu_code": 48270,
+    "Sigungu_name": "밀양시"
+  },
+  {
+    "Sigungu_code": 48310,
+    "Sigungu_name": "거제시"
+  },
+  {
+    "Sigungu_code": 48330,
+    "Sigungu_name": "양산시"
+  },
+  {
+    "Sigungu_code": 48720,
+    "Sigungu_name": "의령군"
+  },
+  {
+    "Sigungu_code": 48730,
+    "Sigungu_name": "함안군"
+  },
+  {
+    "Sigungu_code": 48740,
+    "Sigungu_name": "창녕군"
+  },
+  {
+    "Sigungu_code": 48820,
+    "Sigungu_name": "고성군"
+  },
+  {
+    "Sigungu_code": 48840,
+    "Sigungu_name": "남해군"
+  },
+  {
+    "Sigungu_code": 48850,
+    "Sigungu_name": "하동군"
+  },
+  {
+    "Sigungu_code": 48860,
+    "Sigungu_name": "산청군"
+  },
+  {
+    "Sigungu_code": 48870,
+    "Sigungu_name": "함양군"
+  },
+  {
+    "Sigungu_code": 48880,
+    "Sigungu_name": "거창군"
+  },
+  {
+    "Sigungu_code": 48890,
+    "Sigungu_name": "합천군"
+  },
+  {
+    "Sigungu_code": 50110,
+    "Sigungu_name": "제주시"
+  },
+  {
+    "Sigungu_code": 50130,
+    "Sigungu_name": "서귀포시"
+  }
+]

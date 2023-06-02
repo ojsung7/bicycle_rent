@@ -7,7 +7,6 @@ const { kakao } = window;
 function App() {
   return (
     <div>
-      <Main_menu />
       <Main_map />
     </div>
   );

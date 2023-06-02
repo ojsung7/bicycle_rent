@@ -1,0 +1,70 @@
+[
+  {
+    "Sido_code": 11,
+    "Sido_name": "서울특별시"
+  },
+  {
+    "Sido_code": 26,
+    "Sido_name": "부산광역시"
+  },
+  {
+    "Sido_code": 27,
+    "Sido_name": "대구광역시"
+  },
+  {
+    "Sido_code": 28,
+    "Sido_name": "인천광역시"
+  },
+  {
+    "Sido_code": 29,
+    "Sido_name": "광주광역시"
+  },
+  {
+    "Sido_code": 30,
+    "Sido_name": "대전광역시"
+  },
+  {
+    "Sido_code": 31,
+    "Sido_name": "울산광역시"
+  },
+  {
+    "Sido_code": 36,
+    "Sido_name": "세종특별자치시"
+  },
+  {
+    "Sido_code": 41,
+    "Sido_name": "경기도"
+  },
+  {
+    "Sido_code": 42,
+    "Sido_name": "강원도"
+  },
+  {
+    "Sido_code": 43,
+    "Sido_name": "충청북도"
+  },
+  {
+    "Sido_code": 44,
+    "Sido_name": "충청남도"
+  },
+  {
+    "Sido_code": 45,
+    "Sido_name": "전라북도"
+  },
+  {
+    "Sido_code": 46,
+    "Sido_name": "전라남도"
+  },
+  {
+    "Sido_code": 47,
+    "Sido_name": "경상북도"
+  },
+  {
+    "Sido_code": 48,
+    "Sido_name": "경상남도"
+  },
+  {
+    "Sido_code": 50,
+    "Sido_name": "제주특별자치도"
+  }
+]
