@@ -9,8 +9,6 @@
 body {
   margin: 0;
   font-family: 'Pretendard Variable';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 p{
@@ -18,9 +16,8 @@ p{
   padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main{
+  display: flex;
 }
 
 .bicycle_info{
@@ -63,9 +60,8 @@ code {
 }
 
 .main_menu{
-  position: absolute;
   z-index: 99;
-  width: 40vw;
+  width: 30vw;
   height: 100vh;
   background-color: white;
 }

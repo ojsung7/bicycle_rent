@@ -23,42 +23,41 @@ const Main_map = () => {
     setLevel(2);
     setCenter({
       lat: marker_position.lat,
-      lng: marker_position.lng - 0.0015
+      lng: marker_position.lng
     })
     setIsOpen(marker_index);
   }
 
   const GeoDataFromMenu = (GeoData) => {
-    console.log(GeoData)
-
     let thisLevel = 9;
     const check_sido = ["41", "42", "43", "44", "45", "46", "47", "48", "50"]
 
-    for(let tmp of check_sido){
-      if(tmp===GeoData.thisSido.thisSido_code) thisLevel = 11;
+    for (let tmp of check_sido) {
+      if (tmp === GeoData.thisSido.thisSido_code) thisLevel = 11;
     }
 
-    if(GeoData.thisSigungu !== null) thisLevel = 7;
+    if (GeoData.thisSigungu !== null) thisLevel = 7;
     setLevel(thisLevel)
     setCenter(GeoData.centerPosition)
     setThisSido(GeoData.thisSido)
+
+    console.log(GeoData);
   }
 
-  useEffect(() => {
-    if (thisSido.thisSido_code !== null) MaKeSigunguPolygone(thisSido.thisSido_code)
-  }, [thisSido])
-
+  // useEffect(() => {
+  //   if (thisSido.thisSido_code !== null) MaKeSigunguPolygone(thisSido.thisSido_code)
+  // }, [thisSido])
   const MaKeSigunguPolygone = (Sido_code) => {
     const resultOfPolygone = [];
 
-    for(let GeoData_tmp of SigunguGeoData.features){
+    for (let GeoData_tmp of SigunguGeoData.features) {
       const Sigungu_code = GeoData_tmp.properties.SIG_CD
-      if(Sigungu_code.startsWith(Sido_code)){
+      if (Sigungu_code.startsWith(Sido_code)) {
         const coordinates = GeoData_tmp.geometry.coordinates;
 
-        for(let GeoData1 of coordinates){
+        for (let GeoData1 of coordinates) {
           const coordinates_array = [];
-          for(let GeoData2 of GeoData1[0]){
+          for (let GeoData2 of GeoData1[0]) {
             const coordinates = {
               lat: GeoData2[1],
               lng: GeoData2[0]
@@ -74,11 +73,11 @@ const Main_map = () => {
   }
 
   return (
-    <>
+    <main>
       <Main_menu GeoDataFromMenu={GeoDataFromMenu} />
       <Map
         center={center}
-        style={{ width: "100vw", height: "100vh" }}
+        style={{ width: "70vw", height: "100vh" }}
         level={level}
         ref={map_ref}
         onZoomChanged={(e) => setLevel(e.getLevel())}
@@ -155,7 +154,7 @@ const Main_map = () => {
             ))}
         </MarkerClusterer>
       </Map>
-    </>
+    </main>
   )
 }
 
