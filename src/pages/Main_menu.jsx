@@ -10,7 +10,10 @@ const Main_menu = ({GeoDataFromMenu}) => {
     thisSido_code: null
   });
 
-  const [thisSigungu, setThisSigungu] = useState(null);
+  const [thisSigungu, setThisSigungu] = useState({
+    thisSigungu_name: null,
+    thisSigungu_code: null
+  });
 
   const [sortedSigunguData, setSortedSigunguData] = useState(null);
 
@@ -49,8 +52,13 @@ const Main_menu = ({GeoDataFromMenu}) => {
   const setSelectedSigungu = (e) => {
     const selected_index = e.target.selectedIndex
     const selected_Sigungu_name = e.target[selected_index].text;
+    const selected_Sigungu_code = e.target.value;
 
-    setThisSigungu(selected_Sigungu_name);
+    setThisSigungu({
+      ...thisSigungu,
+      thisSigungu_name: selected_Sigungu_name,
+      thisSigungu_code: selected_Sigungu_code
+    });
   }
   
   useEffect(() => {
@@ -80,19 +88,23 @@ const Main_menu = ({GeoDataFromMenu}) => {
       }
     // }
 
+    //     kakaoGeocoder.addressSearch(thisSido.thisSido_name + ' ' + tmp.Sigungu_name, call_test);
+    //   }
+    // }
     var callback = function (result, status) {
       if (status === kakao.maps.services.Status.OK) {
         const getCenter = result[0]
         GeoDataFromMenu({
           centerPosition : {lat: getCenter.y, lng: getCenter.x},
-          SigunguPosition: SigunguCenter_array,
+          // SigunguPosition: SigunguCenter_array,
           thisSido,
           thisSigungu
         })
       }
     };
     let getCenterAddress = thisSido.thisSido_name;
-    if(thisSigungu !== null) getCenterAddress += ' ' + thisSigungu
+    if(thisSigungu !== null) getCenterAddress += ' ' + thisSigungu.thisSigungu_name
+    console.log(getCenterAddress)
     kakaoGeocoder.addressSearch(getCenterAddress, callback);
   }
 
@@ -115,6 +127,9 @@ const Main_menu = ({GeoDataFromMenu}) => {
             ))
         }
       </select>
+      <div>
+        카드부분
+      </div>
     </div>
   )
 }

@@ -24,7 +24,7 @@ const Main_map = () => {
     setLevel(2);
     setCenter({
       lat: marker_position.lat,
-      lng: marker_position.lng - 0.0015
+      lng: marker_position.lng
     })
     setIsOpen(marker_index);
   }
@@ -71,10 +71,9 @@ const Main_map = () => {
     setSigunguPosition(notSortSigunguData_tmp)
   }
 
-  useEffect(() => {
-    if (thisSido.thisSido_code !== null) MaKeSigunguPolygone(thisSido.thisSido_code)
-  }, [thisSido])
-
+  // useEffect(() => {
+  //   if (thisSido.thisSido_code !== null) MaKeSigunguPolygone(thisSido.thisSido_code)
+  // }, [thisSido])
   const MaKeSigunguPolygone = (Sido_code) => {
     const resultOfPolygone = [];
     let tmp;
@@ -101,11 +100,11 @@ const Main_map = () => {
   }
 
   return (
-    <>
+    <main>
       <Main_menu GeoDataFromMenu={GeoDataFromMenu} />
       <Map
         center={center}
-        style={{ width: "100vw", height: "100vh" }}
+        style={{ width: "70vw", height: "100vh" }}
         level={level}
         ref={map_ref}
         onZoomChanged={(e) => setLevel(e.getLevel())}
@@ -200,7 +199,7 @@ const Main_map = () => {
           )
         }
       </Map>
-    </>
+    </main>
   )
 }
 
