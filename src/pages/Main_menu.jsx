@@ -63,7 +63,7 @@ const Main_menu = ({GeoDataFromMenu}) => {
     var kakaoGeocoder = new kakao.maps.services.Geocoder();
     let SigunguCenter_array = [];
 
-    if(thisSigungu === null){
+    // if(thisSigungu === null){
       for(let tmp of sortedSigunguData){
         var call_test = (result, status) => {
           if (status === kakao.maps.services.Status.OK) {
@@ -78,7 +78,7 @@ const Main_menu = ({GeoDataFromMenu}) => {
 
         kakaoGeocoder.addressSearch(thisSido.thisSido_name + ' ' + tmp.Sigungu_name, call_test);
       }
-    }
+    // }
 
     var callback = function (result, status) {
       if (status === kakao.maps.services.Status.OK) {

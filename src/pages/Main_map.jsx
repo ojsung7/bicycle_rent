@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { CustomOverlayMap, Map, MapMarker, MarkerClusterer, Polygon } from 'react-kakao-maps-sdk'
 import bicycleData from '../data/bicycle.json'
 import SigunguGeoData from '../data/SigunguGeoData.json'
+import SigunguPointData from '../data/SigunguPointData.json'
 import Main_menu from './Main_menu';
 
 const Main_map = () => {
@@ -17,7 +18,7 @@ const Main_map = () => {
   });
 
   const [SigunguPolygone, setSigunguPolygone] = useState([]);
-  const [SigunguCenter, setSigunguCenter] = useState([]);
+  const [SigunguPosition, setSigunguPosition] = useState([]);
 
   const marker_click = (marker_index, marker_position) => {
     setLevel(2);
@@ -29,19 +30,45 @@ const Main_map = () => {
   }
 
   const GeoDataFromMenu = (GeoData) => {
-    console.log(GeoData)
-
     let thisLevel = 9;
     const check_sido = ["41", "42", "43", "44", "45", "46", "47", "48", "50"]
 
-    for(let tmp of check_sido){
-      if(tmp===GeoData.thisSido.thisSido_code) thisLevel = 11;
+    for (let tmp of check_sido) {
+      if (tmp === GeoData.thisSido.thisSido_code) thisLevel = 11;
     }
 
-    if(GeoData.thisSigungu !== null) thisLevel = 7;
+    if (GeoData.thisSigungu !== null) thisLevel = 7;
     setLevel(thisLevel)
     setCenter(GeoData.centerPosition)
     setThisSido(GeoData.thisSido)
+    
+    const Sido_code = GeoData.thisSido.thisSido_code
+    makeSigungoPoint(Sido_code)
+  }
+
+  const makeSigungoPoint = (Sido_code) => {
+    let resultOfPoint = [];
+    for(let Sigungu_element of SigunguPointData.features){
+      const containedSigungu = (Sigungu_element.properties.SIG_CD).startsWith(Sido_code)
+      if(containedSigungu){
+        const Sigungu_object = {
+          name: Sigungu_element.properties.SIG_KOR_NM,
+          lat: Sigungu_element.geometry.coordinates[1],
+          lng: Sigungu_element.geometry.coordinates[0],
+        }
+        resultOfPoint.push(Sigungu_object)
+      }
+    }
+    sortBySigunguName(resultOfPoint)
+  }
+
+  const sortBySigunguName = (notSortSigunguData) => {
+    let notSortSigunguData_tmp = notSortSigunguData.sort((a, b) => {
+      if (a.name > b.name) return 1;
+      if (a.name < b.name) return -1;
+      return 0
+    })
+    setSigunguPosition(notSortSigunguData_tmp)
   }
 
   useEffect(() => {
@@ -50,15 +77,16 @@ const Main_map = () => {
 
   const MaKeSigunguPolygone = (Sido_code) => {
     const resultOfPolygone = [];
+    let tmp;
 
-    for(let GeoData_tmp of SigunguGeoData.features){
+    for (let GeoData_tmp of SigunguGeoData.features) {
       const Sigungu_code = GeoData_tmp.properties.SIG_CD
-      if(Sigungu_code.startsWith(Sido_code)){
+      if (Sigungu_code.startsWith(Sido_code)) {
         const coordinates = GeoData_tmp.geometry.coordinates;
 
-        for(let GeoData1 of coordinates){
+        for (let GeoData1 of coordinates) {
           const coordinates_array = [];
-          for(let GeoData2 of GeoData1[0]){
+          for (let GeoData2 of GeoData1[0]) {
             const coordinates = {
               lat: GeoData2[1],
               lng: GeoData2[0]
@@ -69,7 +97,6 @@ const Main_map = () => {
         }
       }
     }
-
     setSigunguPolygone(resultOfPolygone);
   }
 
@@ -89,11 +116,11 @@ const Main_map = () => {
               <Polygon
                 path={item}
                 strokeWeight={3} // 선의 두께입니다
-                strokeColor={"#39DE2A"} // 선의 색깔입니다
+                strokeColor={"#0089FF"} // 선의 색깔입니다
                 //strokeOpacity={0.8} // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
                 //strokeStyle={"longdash"} // 선의 스타일입니다
-                fillColor={"#CCCCFF"} // 채우기 색깔입니다
-                fillOpacity={0.7} // 채우기 불투명도 입니다
+                fillColor={"#DEF0FF"} // 채우기 색깔입니다
+                fillOpacity={0.6} // 채우기 불투명도 입니다
               />
             )
           )
@@ -154,6 +181,24 @@ const Main_map = () => {
               </>
             ))}
         </MarkerClusterer>
+        {
+          SigunguPosition.length > 0 && (
+            SigunguPosition.map((item) =>
+              <CustomOverlayMap // 커스텀 오버레이를 표시할 Container
+                // 커스텀 오버레이가 표시될 위치입니다
+                position={{
+                  lat: item.lat,
+                  lng: item.lng,
+                }}
+              >
+                {/* 커스텀 오버레이에 표시할 내용입니다 */}
+                <div className='sigungu_name'>
+                  {item.name}
+                </div>
+              </CustomOverlayMap>
+            )
+          )
+        }
       </Map>
     </>
   )
