@@ -20,7 +20,7 @@ main{
   display: flex;
 }
 
-.bicycle_info{
+.bicycle_map_info{
   width: 100%;
   height: 100%;
   background-color: white;
@@ -69,4 +69,13 @@ main{
 .sigungu_name{
   font-size: 14px;
   font-weight: bold;
+}
+
+.select_wrap{
+  font-size: 17px;
+}
+
+.bicycle_card_info {
+  font-size: 20px;
+  padding: 15px;
 }

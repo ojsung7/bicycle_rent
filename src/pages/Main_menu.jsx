@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import SidoData from '../data/Sido.json'
 import SigunguData from '../data/Sigungu.json'
+import bicycleData from '../data/bicycle.json'
 
 const { kakao } = window;
-const Main_menu = ({GeoDataFromMenu}) => {
+const Main_menu = ({ GeoDataFromMenu }) => {
 
   const [thisSido, setThisSido] = useState({
     thisSido_name: null,
@@ -60,9 +61,9 @@ const Main_menu = ({GeoDataFromMenu}) => {
       thisSigungu_code: selected_Sigungu_code
     });
   }
-  
+
   useEffect(() => {
-    if(thisSido.thisSido_code !== null){
+    if (thisSido.thisSido_code !== null) {
       deliverGeoDataToMapComponent();
     }
   }, [thisSido, thisSigungu])
@@ -72,20 +73,20 @@ const Main_menu = ({GeoDataFromMenu}) => {
     let SigunguCenter_array = [];
 
     // if(thisSigungu === null){
-      for(let tmp of sortedSigunguData){
-        var call_test = (result, status) => {
-          if (status === kakao.maps.services.Status.OK) {
-            const SigunguCenter_object = {
-              Sigungu_name: tmp.Sigungu_name,
-              lat: result[0].y,
-              lng: result[0].x
-            }
-            SigunguCenter_array.push(SigunguCenter_object);
+    for (let tmp of sortedSigunguData) {
+      var call_test = (result, status) => {
+        if (status === kakao.maps.services.Status.OK) {
+          const SigunguCenter_object = {
+            Sigungu_name: tmp.Sigungu_name,
+            lat: result[0].y,
+            lng: result[0].x
           }
+          SigunguCenter_array.push(SigunguCenter_object);
         }
-
-        kakaoGeocoder.addressSearch(thisSido.thisSido_name + ' ' + tmp.Sigungu_name, call_test);
       }
+
+      kakaoGeocoder.addressSearch(thisSido.thisSido_name + ' ' + tmp.Sigungu_name, call_test);
+    }
     // }
 
     //     kakaoGeocoder.addressSearch(thisSido.thisSido_name + ' ' + tmp.Sigungu_name, call_test);
@@ -95,7 +96,7 @@ const Main_menu = ({GeoDataFromMenu}) => {
       if (status === kakao.maps.services.Status.OK) {
         const getCenter = result[0]
         GeoDataFromMenu({
-          centerPosition : {lat: getCenter.y, lng: getCenter.x},
+          centerPosition: { lat: getCenter.y, lng: getCenter.x },
           // SigunguPosition: SigunguCenter_array,
           thisSido,
           thisSigungu
@@ -103,32 +104,41 @@ const Main_menu = ({GeoDataFromMenu}) => {
       }
     };
     let getCenterAddress = thisSido.thisSido_name;
-    if(thisSigungu !== null) getCenterAddress += ' ' + thisSigungu.thisSigungu_name
+    if (thisSigungu !== null) getCenterAddress += ' ' + thisSigungu.thisSigungu_name
     console.log(getCenterAddress)
     kakaoGeocoder.addressSearch(getCenterAddress, callback);
   }
 
   return (
     <div className='main_menu'>
-      <select className='select_Sido' onChange={(e) => setSidoAndGetSigungu(e)}>
-        <option>시/도</option>
-        {
-          SidoData.map((item, index) =>
-            <option key={index} value={item.Sido_code}>{item.Sido_name}</option>
-          )
-        }
-      </select>
-      <select className='select_Sigungu' onChange={(e) => setSelectedSigungu(e)}>
-        <option>시/군/구</option>
-        {
-          sortedSigunguData && (
-            sortedSigunguData.map((item, index) =>
-              <option key={index} value={item.Sigungu_code}>{item.Sigungu_name}</option>
-            ))
-        }
-      </select>
-      <div>
-        카드부분
+      <div className='select_wrap'>
+        <select className='select_Sido' onChange={(e) => setSidoAndGetSigungu(e)}>
+          <option>시/도</option>
+          {
+            SidoData.map((item, index) =>
+              <option key={index} value={item.Sido_code}>{item.Sido_name}</option>
+            )
+          }
+        </select>
+        <select className='select_Sigungu' onChange={(e) => setSelectedSigungu(e)}>
+          <option>시/군/구</option>
+          {
+            sortedSigunguData && (
+              sortedSigunguData.map((item, index) =>
+                <option key={index} value={item.Sigungu_code}>{item.Sigungu_name}</option>
+              ))
+          }
+        </select>
+      </div>
+      <div className='main_card'>
+        <div className='bicycle_card_info'>
+          <p className='title'>자전거대여소<span className='charge_sort'>무료</span></p>
+          <p>이용요금 : 123</p>
+          <div className='address'>
+            <p>도로명주소 : 소재지도로명주소</p>
+            <p>지번주소 : 소재지지번주소</p>
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -74,7 +74,7 @@ const Main_map = () => {
   useEffect(() => {
     if (thisSido.thisSido_code !== null) MaKeSigunguPolygone(thisSido.thisSido_code)
   }, [thisSido])
-  
+
   const MaKeSigunguPolygone = (Sido_code) => {
     const resultOfPolygone = [];
 
@@ -156,7 +156,7 @@ const Main_map = () => {
                     xAnchor={0.5}
                     yAnchor={1.3}
                   >
-                    <div className='bicycle_info'>
+                    <div className='bicycle_map_info'>
                       {item.자전거대여소명 && (<p className='title'>{item.자전거대여소명}<span className={'charge_sort' + (item.요금구분 === '무료' ? ' free' : '')}>({item.요금구분})</span></p>)}
                       {
                         item.요금구분 === '유료' && item.자전거이용요금
