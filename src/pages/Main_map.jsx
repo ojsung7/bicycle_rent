@@ -71,12 +71,12 @@ const Main_map = () => {
     setSigunguPosition(notSortSigunguData_tmp)
   }
 
-  // useEffect(() => {
-  //   if (thisSido.thisSido_code !== null) MaKeSigunguPolygone(thisSido.thisSido_code)
-  // }, [thisSido])
+  useEffect(() => {
+    if (thisSido.thisSido_code !== null) MaKeSigunguPolygone(thisSido.thisSido_code)
+  }, [thisSido])
+  
   const MaKeSigunguPolygone = (Sido_code) => {
     const resultOfPolygone = [];
-    let tmp;
 
     for (let GeoData_tmp of SigunguGeoData.features) {
       const Sigungu_code = GeoData_tmp.properties.SIG_CD
@@ -97,6 +97,8 @@ const Main_map = () => {
       }
     }
     setSigunguPolygone(resultOfPolygone);
+
+    console.log(resultOfPolygone)
   }
 
   return (
