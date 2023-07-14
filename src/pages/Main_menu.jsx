@@ -4,7 +4,7 @@ import SigunguData from '../data/Sigungu.json'
 import bicycleData from '../data/bicycle.json'
 
 const { kakao } = window;
-const Main_menu = ({ GeoDataFromMenu }) => {
+const Main_menu = ({ GeoDataFromMenu, BicycleCodeFromMemu }) => {
 
   const [thisSido, setThisSido] = useState({
     thisSido_name: null,
@@ -16,12 +16,19 @@ const Main_menu = ({ GeoDataFromMenu }) => {
     thisSigungu_code: null
   });
 
+  const [selectedBicycle, setSelectedBicycle] = useState(null);
+
   const [sortedSigunguData, setSortedSigunguData] = useState(null);
+
+  const [bicycleCardData, setBicycleCardData] = useState([]);
+
 
   const setSidoAndGetSigungu = (e) => {
     setThisSigungu(null);
+    document.getElementsByClassName("select_Sigungu")[0].children[0].selected = true
 
     const selected_index = e.target.selectedIndex
+    if (selected_index === 0) return false;
     const selected_Sido_name = e.target[selected_index].text;
     const selected_Sido_code = e.target.value;
 
@@ -52,6 +59,7 @@ const Main_menu = ({ GeoDataFromMenu }) => {
 
   const setSelectedSigungu = (e) => {
     const selected_index = e.target.selectedIndex
+    if (selected_index === 0) return false;
     const selected_Sigungu_name = e.target[selected_index].text;
     const selected_Sigungu_code = e.target.value;
 
@@ -65,6 +73,7 @@ const Main_menu = ({ GeoDataFromMenu }) => {
   useEffect(() => {
     if (thisSido.thisSido_code !== null) {
       deliverGeoDataToMapComponent();
+      makeBicycleCardData();
     }
   }, [thisSido, thisSigungu])
 
@@ -105,12 +114,38 @@ const Main_menu = ({ GeoDataFromMenu }) => {
     };
     let getCenterAddress = thisSido.thisSido_name;
     if (thisSigungu !== null) getCenterAddress += ' ' + thisSigungu.thisSigungu_name
-    console.log(getCenterAddress)
     kakaoGeocoder.addressSearch(getCenterAddress, callback);
   }
 
+  var makeBicycleCardData = () => {
+    let resultOfBicycleCard = [];
+
+    let searchAddressKeyword = ''
+    if (thisSido) searchAddressKeyword += thisSido.thisSido_name
+    if (thisSigungu) searchAddressKeyword += ' ' + thisSigungu.thisSigungu_name
+
+    for (let bicycleTmp of bicycleData) {
+      const 도로명주소 = bicycleTmp.소재지도로명주소
+      const 지번주소 = bicycleTmp.소재지지번주소
+      if (도로명주소.includes(searchAddressKeyword) || 지번주소.includes(searchAddressKeyword)) {
+        resultOfBicycleCard.push(bicycleTmp)
+      }
+    }
+
+    resultOfBicycleCard = resultOfBicycleCard.sort(() => Math.random() - 0.5)
+
+    console.log(resultOfBicycleCard)
+
+    setBicycleCardData(resultOfBicycleCard);
+  }
+
+  useEffect(() => {
+    console.log(selectedBicycle)
+  }, [selectedBicycle])
+
   return (
     <div className='main_menu'>
+      <p className='main_title'>자전거대여소 찾기</p>
       <div className='select_wrap'>
         <select className='select_Sido' onChange={(e) => setSidoAndGetSigungu(e)}>
           <option>시/도</option>
@@ -131,14 +166,24 @@ const Main_menu = ({ GeoDataFromMenu }) => {
         </select>
       </div>
       <div className='main_card'>
-        <div className='bicycle_card_info'>
-          <p className='title'>자전거대여소<span className='charge_sort'>무료</span></p>
-          <p>이용요금 : 123</p>
-          <div className='address'>
-            <p>도로명주소 : 소재지도로명주소</p>
-            <p>지번주소 : 소재지지번주소</p>
-          </div>
-        </div>
+        {
+          bicycleCardData.length > 0 && (
+            bicycleCardData.map((item, index) =>
+              <div key={index} className='bicycle_card_info'>
+                <p className='title' onClick={() => setSelectedBicycle(item.구분코드)}>{item.자전거대여소명}<span className={'charge_sort' + (item.요금구분 === '무료' ? ' free' : '')}>({item.요금구분})</span></p>                
+                <div className='etc_info'>
+                  <p>이용요금 : {
+                    item.요금구분 === '무료'
+                    ? "무료"
+                    : item.자전거이용요금
+                    }</p>
+                  <p>도로명주소 : {item.소재지도로명주소}</p>
+                  <p>지번주소 : {item.소재지지번주소}</p>
+                </div>
+              </div>
+            )
+          )
+        }
       </div>
     </div>
   )

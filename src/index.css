@@ -30,40 +30,47 @@ main{
   border-radius: 15px;
 }
 
-.bicycle_info .title{
+.bicycle_map_info .title{
   font-size: 17px;
   font-weight: bold;
 }
 
-.bicycle_info .address{
+.bicycle_map_info .address{
   margin-bottom: 15px;
 }
 
-.bicycle_info .address p{
+.bicycle_map_info .address p{
   font-size: 12px;
 }
 
-.bicycle_info .etc{
+.bicycle_map_info .etc{
   margin-top: 15px;
 }
 
-.bicycle_info .etc p{
+.bicycle_map_info .etc p{
   font-size: 12px;
 }
 
-.bicycle_info .title .charge_sort{
+.bicycle_map_info .title .charge_sort{
   color: red;
 }
 
-.bicycle_info .title .charge_sort.free{
+.bicycle_map_info .title .charge_sort.free{
   color: skyblue;
 }
 
 .main_menu{
   z-index: 99;
-  width: 30vw;
+  width: 20vw;
   height: 100vh;
   background-color: white;
+}
+
+.main_title{
+  height: 4%;
+  margin: 10px 0 0 10px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .sigungu_name{
@@ -72,10 +79,44 @@ main{
 }
 
 .select_wrap{
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.select_wrap select{
   font-size: 17px;
 }
 
+.main_card{
+  height: 90%;
+  overflow-y: scroll;
+}
 .bicycle_card_info {
   font-size: 20px;
   padding: 15px;
+  border-top: 2px solid #ababab;
+}
+
+.bicycle_card_info .title{
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.bicycle_card_info .etc_info{
+  font-size: 16px;
+  display: flex;
+  row-gap: 3px;
+  flex-direction: column;
+}
+
+.bicycle_card_info .charge_sort{
+  color: red;
+}
+
+.bicycle_card_info .charge_sort.free{
+  color: skyblue;
 }

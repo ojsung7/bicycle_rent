@@ -20,13 +20,13 @@ const Main_map = () => {
   const [SigunguPolygone, setSigunguPolygone] = useState([]);
   const [SigunguPosition, setSigunguPosition] = useState([]);
 
-  const marker_click = (marker_index, marker_position) => {
+  const marker_click = (bicycle_code, marker_position) => {
     setLevel(2);
     setCenter({
       lat: marker_position.lat,
       lng: marker_position.lng
     })
-    setIsOpen(marker_index);
+    setIsOpen(bicycle_code);
   }
 
   const GeoDataFromMenu = (GeoData) => {
@@ -97,16 +97,18 @@ const Main_map = () => {
       }
     }
     setSigunguPolygone(resultOfPolygone);
-
-    console.log(resultOfPolygone)
   }
+
+  useEffect(() => {
+    console.log(map_ref)
+  }, [map_ref])
 
   return (
     <main>
       <Main_menu GeoDataFromMenu={GeoDataFromMenu} />
       <Map
         center={center}
-        style={{ width: "70vw", height: "100vh" }}
+        style={{ width: "80vw", height: "100vh" }}
         level={level}
         ref={map_ref}
         onZoomChanged={(e) => setLevel(e.getLevel())}
@@ -134,7 +136,7 @@ const Main_map = () => {
             bicycleData.map((item, index) =>
               <>
                 <MapMarker
-                  onClick={() => marker_click(index, { lat: item.위도, lng: item.경도 })}
+                  onClick={() => marker_click(item.구분코드, { lat: item.위도, lng: item.경도 })}
                   key={index}
                   position={{ lat: item.위도, lng: item.경도 }}
                   image={{
@@ -145,7 +147,7 @@ const Main_map = () => {
                     },
                   }}
                 />
-                {isOpen == index && (
+                {isOpen === item.구분코드 && (
                   <CustomOverlayMap // 커스텀 오버레이를 표시할 Container
                     // 커스텀 오버레이가 표시될 위치입니다
                     position={{
