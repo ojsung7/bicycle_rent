@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { CustomOverlayMap, Map, MapMarker, MarkerClusterer, Polygon } from 'react-kakao-maps-sdk'
-import bicycleData from '../data/bicycle.json'
-import SigunguGeoData from '../data/SigunguGeoData.json'
-import SigunguPointData from '../data/SigunguPointData.json'
-import Main_menu from './Main_menu';
+import bicycleData from '../../data/bicycle.json'
+import SigunguGeoData from '../../data/SigunguGeoData.json'
+import SigunguPointData from '../../data/SigunguPointData.json'
+import Main_menu from './Biycycle_rent_main_menu';
 
 const Main_map = () => {
   const map_ref = useRef();

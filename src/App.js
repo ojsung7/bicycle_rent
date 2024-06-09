@@ -1,14 +1,11 @@
-import { useEffect } from 'react';
-import Main_map from './pages/Main_map';
-import Main_menu from './pages/Main_menu';
-
-const { kakao } = window;
+import Bycycle_rent_main_map from './site/bicycle_rent/Biycycle_rent_main_map'
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <Main_map />
-    </div>
+    <Routes>
+      <Route path='/bicycle_rent' element={<Bycycle_rent_main_map/>} />
+    </Routes>
   );
 }
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import SidoData from '../data/Sido.json'
-import SigunguData from '../data/Sigungu.json'
-import bicycleData from '../data/bicycle.json'
+import SidoData from '../../data/Sido.json'
+import SigunguData from '../../data/Sigungu.json'
+import bicycleData from '../../data/bicycle.json'
 
 const { kakao } = window;
 const Main_menu = ({ GeoDataFromMenu, BicycleCodeFromMemu }) => {
