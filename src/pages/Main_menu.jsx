@@ -134,18 +134,19 @@ const Main_menu = ({ GeoDataFromMenu, BicycleCodeFromMemu }) => {
 
     resultOfBicycleCard = resultOfBicycleCard.sort(() => Math.random() - 0.5)
 
-    console.log(resultOfBicycleCard)
+    // console.log(resultOfBicycleCard)
 
     setBicycleCardData(resultOfBicycleCard);
   }
 
   useEffect(() => {
-    console.log(selectedBicycle)
+    // console.log(selectedBicycle)
   }, [selectedBicycle])
 
   return (
     <div className='main_menu'>
       <p className='main_title'>자전거대여소 찾기</p>
+      <p className='data_src'>데이터 출처 : <a href = "https://www.data.go.kr/data/15017319/standard.do#/layer_data_infomation" target='_blank'>공공데이터포털</a></p>
       <div className='select_wrap'>
         <select className='select_Sido' onChange={(e) => setSidoAndGetSigungu(e)}>
           <option>시/도</option>

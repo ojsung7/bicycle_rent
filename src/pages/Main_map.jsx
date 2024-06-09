@@ -17,6 +17,8 @@ const Main_map = () => {
     thisSido_code: null
   });
 
+  const [thisSigungu, setThisSigungu] = useState([])
+
   const [SigunguPolygone, setSigunguPolygone] = useState([]);
   const [SigunguPosition, setSigunguPosition] = useState([]);
 
@@ -44,6 +46,29 @@ const Main_map = () => {
     
     const Sido_code = GeoData.thisSido.thisSido_code
     makeSigungoPoint(Sido_code)
+
+    if (GeoData.thisSigungu) {
+      const Sigungu_code = GeoData.thisSigungu.thisSigungu_code
+      const resultOfPolygone = [];
+
+      for (var i in SigunguGeoData.features) {
+        var SigunguGeoDataFeatures = SigunguGeoData.features[i]
+        if (SigunguGeoDataFeatures.properties.SIG_CD == Sigungu_code){
+          for (let GeoData1 of SigunguGeoDataFeatures.geometry.coordinates) {
+            const coordinates_array = [];
+            for (let GeoData2 of GeoData1[0]) {
+              const coordinates = {
+                lat: GeoData2[1],
+                lng: GeoData2[0]
+              }
+              coordinates_array.push(coordinates)
+            }
+            resultOfPolygone.push(coordinates_array)
+          }
+        }
+      }
+      setThisSigungu(resultOfPolygone)
+    }
   }
 
   const makeSigungoPoint = (Sido_code) => {
@@ -100,7 +125,7 @@ const Main_map = () => {
   }
 
   useEffect(() => {
-    console.log(map_ref)
+    // console.log(map_ref)
   }, [map_ref])
 
   return (
@@ -126,6 +151,19 @@ const Main_map = () => {
                 fillOpacity={0.6} // 채우기 불투명도 입니다
               />
             )
+          )
+        }
+        {
+          thisSigungu.length > 0 && (
+              <Polygon
+                path={thisSigungu}
+                strokeWeight={3} // 선의 두께입니다
+                strokeColor={"#0089FF"} // 선의 색깔입니다
+                //strokeOpacity={0.8} // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+                //strokeStyle={"longdash"} // 선의 스타일입니다
+                fillColor={"#e6a9fe"} // 채우기 색깔입니다
+                fillOpacity={0.3} // 채우기 불투명도 입니다
+              />
           )
         }
         <MarkerClusterer

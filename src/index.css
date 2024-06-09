@@ -73,6 +73,12 @@ main{
   font-weight: bold;
 }
 
+.data_src{
+  font-size: 15px;
+  text-align: right;
+  margin-right: 15px;
+}
+
 .sigungu_name{
   font-size: 14px;
   font-weight: bold;
@@ -91,7 +97,7 @@ main{
 }
 
 .main_card{
-  height: 90%;
+  /* height: 90%; */
   overflow-y: scroll;
 }
 .bicycle_card_info {
